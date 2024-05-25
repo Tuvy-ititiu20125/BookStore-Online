@@ -1,0 +1,138 @@
+body, html {
+    height: 100%
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #6f6f6f;
+    background-color: #fff;
+}
+
+.btn.btn-md {
+    padding: 5px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    margin: 3px 5px
+}
+
+.btn-orange {
+    color: #fff;
+    background-color: #5c10ff;
+    border-color: transparent
+}
+
+.btn-orange:hover {
+    color: #fff;
+    background-color:  #8070db;
+    border-color: #3b19a9
+}
+
+
+
+#landing #Hero {
+    background-color: #f5f5f9;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding: 100px 0 40px
+}
+
+@media (max-width: 991px) {
+    #landing #Hero {
+        padding-top: 40px
+    }
+}
+
+#landing #Hero .content {
+
+    display: flex
+}
+
+#landing #Hero .content > div {
+    max-width: 50%
+}
+
+#landing #Hero .content .imageContainer img {
+    width: 100%;
+    align-self: center
+}
+
+#landing #Hero .content h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    color:  #5c10ff
+}
+
+#landing #Hero .content h3 {
+    font-size: 25px;
+    line-height: normal;
+    font-weight: 400;
+    color:  #8070db;
+}
+
+#landing #Hero .content h4 {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 400;
+    margin-bottom: 40px;
+    margin-top: 20px
+}
+
+@media (max-width: 991px) {
+    #landing #Hero .content h4 {
+        font-size: 18px
+    }
+}
+
+#landing #Hero .content .buttons button {
+    min-width: 170px
+}
+
+#landing #Hero .content .buttons :first-child {
+    margin-left: 0;
+    margin-right: 16px
+}
+
+#landing #Hero .content .buttons :last-child {
+    margin-right: 0
+}
+
+.container {
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+@media (max-width: 991px) {
+    #landing .container {
+        width: 100%
+    }
+}
+
+.text-container {
+    max-width: 100%;
+}
+
+.right-image {
+    float: right;
+    margin-left: 50px;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+
+
+
+
