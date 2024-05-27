@@ -135,31 +135,22 @@ public class CustomerDAO {
         return customer;
     }
 
-    public boolean updateCustomer(Customer customer) throws SQLException {
-        String sql = "UPDATE customer SET ID =?, Password =?, FirstName =? , LastName = ?, DOB= ?, AmountInAccount=? WHERE ID = ?";
+    public void updateCustomer(Customer customer) throws SQLException {
+        String sql = "UPDATE customer SET Password = ?, FirstName = ?, LastName = ?, DOB = ?, AmountInAccount = ? WHERE ID = ?";
+
         connectionDB.connect();
-        PreparedStatement statement = null;
-        boolean rowUpdated = false;
+        PreparedStatement statement = connectionDB.getJdbcConnection().prepareStatement(sql);
 
-        try {
-            statement = connectionDB.getJdbcConnection().prepareStatement(sql);
-            statement.setString(1, customer.getID());
-            statement.setString(2, customer.getPassword());
-            statement.setString(3, customer.getFirstName());
-            statement.setString(4, customer.getLastName());
-            statement.setDate(5, new Date(customer.getDOB().getTime()));
-            statement.setString(6, customer.getID());
-            rowUpdated = statement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            if (statement != null) {
-                statement.close();
-            }
-            connectionDB.disconnect();
-        }
+        statement.setString(1, customer.getPassword());
+        statement.setString(2, customer.getFirstName());
+        statement.setString(3, customer.getLastName());
+        statement.setDate(4, new Date(customer.getDOB().getTime()));
+        statement.setDouble(5, customer.getAmountInAccount());
+        statement.setString(6, customer.getID());
 
-        return rowUpdated;
+        statement.executeUpdate();
+        statement.close();
+        connectionDB.disconnect();
     }
 
 }

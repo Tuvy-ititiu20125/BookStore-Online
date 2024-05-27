@@ -52,7 +52,7 @@
 
     <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
       <div class="app-brand demo">
-        <a href="AdminManagePage.jsp" class="app-brand-link">
+        <a href="CustomerManagePage.jsp" class="app-brand-link">
 
           <span class="app-brand-text demo menu-text fw-bolder ms-2">My Bookstore</span>
         </a>
@@ -145,7 +145,7 @@
                 <hr class="my-0" />
                 <div class="card-body">
                   <form method="POST" action="customerServlet">
-                    <input type="hidden" name="action" value="update">
+                    <input type="hidden" name="action" value="updateCustomer">
                     <input type="hidden" name="id" value="<%= customer.getID() %>">
                     <div class="row">
                       <div class="mb-3 col-md-6">

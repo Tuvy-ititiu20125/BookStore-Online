@@ -50,4 +50,14 @@ public class Admin {
     public void setDOB(Date DOB) {
         this.DOB = DOB;
     }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "ID='" + ID + '\'' +
+                ", Password='" + Password + '\'' +
+                ", FullName='" + FullName + '\'' +
+                ", DOB=" + DOB +
+                '}';
+    }
 }

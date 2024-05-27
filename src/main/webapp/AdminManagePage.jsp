@@ -40,13 +40,15 @@
 <%
     // Retrieve the book ID from the request parameter
     String adminId = request.getParameter("id");
-
+    //System.out.println(adminId);
     // Retrieve the current book's information from the database using the book ID
     ConnectionDB connectionDB = new ConnectionDB();
     AdminDAO adminDAO = new AdminDAO(connectionDB);
     Admin admin;
     try {
-        admin = adminDAO.getAdminById((String) session.getAttribute(adminId));
+        admin = adminDAO.getAdminById((String) session.getAttribute("adminId"));
+        System.out.println(admin.toString());
+
     } catch (SQLException e) {
         throw new RuntimeException(e);
     }

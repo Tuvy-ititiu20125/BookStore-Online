@@ -70,4 +70,16 @@ public class Customer {
     public void setAmountInAccount(double amountInAccount) {
         AmountInAccount = amountInAccount;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "ID='" + ID + '\'' +
+                ", Password='" + Password + '\'' +
+                ", FirstName='" + FirstName + '\'' +
+                ", LastName='" + LastName + '\'' +
+                ", DOB=" + DOB +
+                ", AmountInAccount=" + AmountInAccount +
+                '}';
+    }
 }

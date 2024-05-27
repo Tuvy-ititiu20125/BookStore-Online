@@ -61,9 +61,7 @@ public class CustomerServlet extends  HttpServlet{
                 case "updateCustomer":
                     try {
                         updateCustomer(request, response);
-                    } catch (ParseException e) {
-                        throw new RuntimeException(e);
-                    } catch (SQLException e) {
+                    } catch (ParseException | SQLException e) {
                         throw new RuntimeException(e);
                     }
                     break;
@@ -171,12 +169,14 @@ public class CustomerServlet extends  HttpServlet{
         String firstName = request.getParameter("firstname");
         String lastName = request.getParameter("lastname");
         String dobString = request.getParameter("dob");
-        Double amount = Double.valueOf(request.getParameter("amount"));
+        double amount = Double.parseDouble(request.getParameter("amount"));
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date dob = sdf.parse(dobString);
 
         Customer customer = new Customer(id, password, firstName, lastName, dob, amount);
+
+        System.out.println("Customer: " + customer);
 
         customerDAO.updateCustomer(customer);
 

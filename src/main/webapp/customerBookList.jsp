@@ -50,7 +50,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="CustomerUpdateAccount.jsp" class="menu-link">
                         <div>👨‍💼 Account Settings</div>
                     </a>
 
