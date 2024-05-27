@@ -152,10 +152,12 @@
                         <label for="password" class="form-label">PASSWORD</label>
                         <input
                                 class="form-control"
-                                type="text"
+                                type="password"
                                 name="password"
                                 id="password"
                                 value="<%=customer.getPassword()%>" />
+
+
                       </div>
 
 
@@ -248,6 +250,8 @@
 
 <!-- Main JS -->
 <script src="assets/js/main.js"></script>
+
+
 
 </body>
 </html>

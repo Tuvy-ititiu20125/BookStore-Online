@@ -68,7 +68,14 @@ public class AdminLoginServlet extends HttpServlet {
 
             // Execute the query and check if the result set has a row
             ResultSet rs = stmt.executeQuery();
-            isAuthenticated = rs.next();
+            String passwordDB;
+            while (rs.next()) {
+                isAuthenticated = true;
+                passwordDB = rs.getString("Password");
+                System.out.println("PasswordDB: " + passwordDB);
+            }
+
+
 
             // Close the database resources
             rs.close();

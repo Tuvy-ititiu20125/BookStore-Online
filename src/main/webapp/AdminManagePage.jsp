@@ -98,6 +98,8 @@
                                 <div>Customers</div>
                             </a>
                         </li>
+
+
                     </ul>
                 </li>
 
@@ -107,6 +109,13 @@
                 <li class="menu-item">
                     <a href="BookList.jsp" class="menu-link">
                         <div>📚 Library</div>
+                    </a>
+                </li>
+
+                <li class="menu-header small text-uppercase"><span class="menu-header-text">LOG OUT</span></li>
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link" id="logoutLink">
+                        <div>🚪 Log Out</div>
                     </a>
                 </li>
             </ul>
@@ -236,6 +245,24 @@
 <script src="assets/js/main.js"></script>
 
 <script>
+    document.getElementById('logoutLink').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Make an AJAX request to a server-side script to clear the session
+        fetch('clearSession.jsp')
+            .then(function(response) {
+                // If the request was successful, navigate to the logout page
+                if (response.ok) {
+                    window.location.href = 'index.html';
+                } else {
+                    console.error('Failed to clear session');
+                }
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+            });
+    });
+
     $(document).ready(function() {
         // First AJAX call
         $.ajax({

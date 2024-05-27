@@ -92,10 +92,10 @@ public class AdminDAO {
         Admin admin = null;
         if (resultSet.next()) {
             admin = new Admin();
-            admin.setID(resultSet.getString("id"));
-            admin.setFullName(resultSet.getString("password"));
-            admin.setFullName(resultSet.getString("fullname"));
-            admin.setDOB(resultSet.getDate("dob"));
+            admin.setID(resultSet.getString("ID"));
+            admin.setPassword(resultSet.getString("Password"));
+            admin.setFullName(resultSet.getString("FullName"));
+            admin.setDOB(resultSet.getDate("DOB"));
         }
 
         resultSet.close();
