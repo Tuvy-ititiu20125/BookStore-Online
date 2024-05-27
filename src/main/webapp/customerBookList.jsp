@@ -74,6 +74,12 @@
                         <div>📚 Library</div>
                     </a>
                 </li>
+
+                <li class="menu-item">
+                    <a href="index.html" class="menu-link" id="logoutLink">
+                        <div>🚪 Log Out</div>
+                    </a>
+                </li>
             </ul>
         </aside>
 

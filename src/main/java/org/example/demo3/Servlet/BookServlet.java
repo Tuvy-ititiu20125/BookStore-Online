@@ -157,7 +157,7 @@ public class BookServlet extends HttpServlet {
         Date publicationDate = sdf.parse(publicationDateString);
 
         Book book = new Book(id, bookTitle, authorName, publicationDate, version, genre, price, type);
-
+        System.out.println("Book: " + book);
         bookDAO.updateBook(book);
 
         List<Book> books = bookDAO.listAllBooks();

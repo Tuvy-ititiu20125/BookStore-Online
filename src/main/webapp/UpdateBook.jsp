@@ -38,7 +38,7 @@
     BookDAO bookDAO = new BookDAO(connectionDB);
     Book book;
     try {
-        book = bookDAO.getBookById(bookId);
+        book = bookDAO.getBookById("bookId");
     } catch (SQLException e) {
         throw new RuntimeException(e);
     }
